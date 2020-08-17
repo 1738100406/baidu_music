@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>百度音乐系统 - Arry老师</title>
+		<meta name="keywords" content="关键词,关键词">
+		<meta name="description" content="">
+
+		<style type="text/css">
+			*{margin:0;padding:0;}
+			body{font-size:12px;font-family:"微软雅黑";color:#666;}
+			img{border:none;}
+
+			/*top start*/
+			.top{width:100%;height:56px;background:#333;}
+			.top .t_header{width:95%;height:56px;margin:0 auto;}
+			.top .t_header .t_logo{margin-top:12px;float:left;}
+			.top .t_header .t_desc{float:right;line-height:56px;font-size:18px;}
+			/*end top*/
+
+			/*content start*/
+			.content{width:100%;margin-top:15px}
+			.content .c_box{padding:10px;}
+
+			/*c_select start*/
+			.content .c_box .c_select{width:190px;float:left;}
+			.content .c_box .c_select .c_menu{border-bottom:1px solid #ddd;}
+			.content .c_box .c_select .c_menu ul li{list-style:none;line-height:36px;color:#333;padding-left: 10px;border-radius:4px;cursor: pointer;}
+			.content .c_box .c_select .c_menu ul li:hover{background:#f0f0f0;}
+			.content .c_box .c_select .c_menu ul .c_sel{background:#f0f0f0;}
+			.content .c_box .c_select .c_add .c_mymusic{float:left;color:#aaa;line-height:40px;}
+			.content .c_box .c_select .c_add .c_create{width:18px;height:18px;display:block;float:right;background:url("images/icon.png") 0px -412px;margin-top: 12px;}
+			/*end c_select*/
+			
+			/*c_list start*/
+			.content .c_box .c_list{width:58%;float:left;margin-left:35px;}
+			.content .c_box .c_list .c_music .m_title{width:100%;height:36px;border-bottom:1px solid #ebebeb;}
+			.content .c_box .c_list .c_music .m_title .m_check{float:left;padding: 11px 5px 0px 10px;}
+			.content .c_box .c_list .c_music .m_title .m_info{width:57%;float:left;margin-left:70px;color:#aaa;}
+			.content .c_box .c_list .c_music .m_title .m_info .m_t{width:33%;float:left;padding-top:8px;}
+			.content .c_box .c_list .c_music .s_list{width:100%;height:44px;border-bottom:1px solid #ebebeb;}
+			.content .c_box .c_list .c_music .s_list:hover{background:#f5f5f5;}
+			.content .c_box .c_list .c_music .m_song .s_list .l_choose{float:left;padding: 15px 5px 0px 10px;}
+			.content .c_box .c_list .c_music .m_song .s_list .l_number{float:left;width:36px;height:44px;text-align:center;line-height:44px;}
+			.content .c_box .c_list .c_music .m_song .s_list .l_info{float:left;width:57%;margin-left:32px;}
+			.content .c_box .c_list .c_music .m_song .s_list .l_info .l_t{float:left;width:33%;line-height:44px;}
+			.content .c_box .c_list .c_music .m_song .s_list .l_love{width:110px;height:44px;float:right;}
+			.content .c_box .c_list .c_music .m_song .s_list .l_love .l_icon{width:18px;height:18px;display:block;float:left;margin: 12px 18px 0 0;background:url("images/icon.png") no-repeat;}
+			.content .c_box .c_list .c_music .m_song .s_list .l_love .l_like{background-position: 0 -155px;}
+			.content .c_box .c_list .c_music .m_song .s_list .l_love .l_more{background-position:0 -473px;}
+			.content .c_box .c_list .c_music .m_song .s_list .l_love .l_del{background-position:0 -491px;}
+			/*end c_list*/
+
+			.content .c_box .c_lrc{width:250px;height:600px;float:right;}
+			.content .c_box .c_lrc .l_img{text-align:center;padding-top:15px;}
+			.content .c_box .c_lrc .l_img img{border-radius:10px;box-shadow: 1px 2px 10px -1px #000;}
+			.content .c_box .c_lrc .l_btn{width:120px;height:40px;background:#F90;display:block;text-align:center;line-height:40px;margin:10px auto;border-radius:3px;color:#fff;text-decoration:none;font-size:16px;}
+			.content .c_box .c_lrc .l_btn:hover{background:#F60;}
+			.content .c_box .c_lrc .l_con{width:250px;height:350px;overflow:auto;}
+			.content .c_box .c_lrc .l_con .msg{text-align:center;line-height:30px;font-size:14px;}
+			.content .c_box .c_lrc .l_con .sel{font-size:18px;color:#69F;}
+			/*end content*/
+
+			/*c_player start*/
+			.c_player{width:100%;height:80px;background:#333;position:fixed;left:0;bottom:0;}
+			/*end c_player*/
+			
+
+			::-webkit-scrollbar{width:5px;height:6px;background:#ccc;}
+			::-webkit-scrollbar-button{background-color:#e5e5e5;}
+			::-webkit-scrollbar-track{background:#999;}
+			::-webkit-scrollbar-track-piece{background:#ccc}
+			::-webkit-scrollbar-thumb{background:#666;}
+			::-webkit-scrollbar-corner{background:#82AFFF;}
+			::-webkit-scrollbar-resizer{background:#FF0BEE;}
+			scrollbar{-moz-appearance:none !important;background:rgb(0,255,0) !important;}
+			scrollbarbutton{-moz-appearance:none !important;background-color:rgb(0,0,255) !important;}
+			scrollbarbutton:hover{-moz-appearance:none !important;background-color:rgb(255,0,0) !important;}
+
+
+		</style>
+
+	</head>
+<body>
+	
+	<!--top start-->
+	<div class="top">
+		<div class="t_header">
+			<div class="t_logo">
+				<a href="#">
+					<img src="images/logo.png" alt="潭州教育音乐系统" width="134" height="32" />
+				</a>
+			</div>
+			<div class="t_desc">百度Music音乐系统</div>
+		</div>
+	</div>
+	<!--end top-->
+
+	<!--content start-->
+	<div class="content">
+		<div class="c_box">
+
+			<!--c_select start-->
+			<div class="c_select">
+				<div class="c_menu">
+					<ul>
+						<li class="c_sel">正在播放</li>
+						<li>播放历史</li>
+						<li>收藏列表</li>
+					</ul>
+				</div>
+				<div class="c_add">
+					<span class="c_mymusic">我创建的精选集</span>
+					<a href="#" class="c_create"></a>
+					<div class="c_title"><img src="images/01.png" alt="创建选集提示" width="185" height="89" /></div>
+				</div>
+			</div>
+			<!--end c_select-->
+		
+			<!--c_list start-->
+			<div class="c_list">
+				<div class="c_music">
+					<div class="m_title">
+						<a href="#" class="m_check"><input type="checkbox" /></a>
+						<div class="m_info">
+							<div class="m_t">歌曲(30)</div>
+							<div class="m_t">演唱者</div>
+							<div class="m_t">专辑</div>
+						</div>
+					</div>
+					<div class="m_song">
+						<div class="s_list">
+							<p class="l_choose"><input type="checkbox"></p>
+							<p class="l_number">1</p>
+							<div class="l_info">
+								
+
+					</div>
+				</div>
+			
+			</div>
+			<!--end c_list-->
+
+			<!--c_lrc start-->
+			<div class="c_lrc">
+				<		
+				</div>
+			</div>
+			<!--end c_lrc-->
+		</div>
+	</div>
+	<!--end content-->
+
+	<!--c_player start-->
+	<div class="c_player"></div>
+	<!--end c_player-->
+
+</body>
+</html>
