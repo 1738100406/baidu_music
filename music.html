@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<title>百度音乐系统 - Arry老师</title>
+		<title>百度音乐系统 - 张震岳</title>
 		<meta name="keywords" content="关键词,关键词">
 		<meta name="description" content="">
 
@@ -61,11 +61,6 @@
 			.content .c_box .c_lrc .l_con .sel{font-size:18px;color:#69F;}
 			/*end content*/
 
-			/*c_player start*/
-			.c_player{width:100%;height:80px;background:#333;position:fixed;left:0;bottom:0;}
-			/*end c_player*/
-			
-
 			::-webkit-scrollbar{width:5px;height:6px;background:#ccc;}
 			::-webkit-scrollbar-button{background-color:#e5e5e5;}
 			::-webkit-scrollbar-track{background:#999;}
@@ -77,6 +72,58 @@
 			scrollbarbutton{-moz-appearance:none !important;background-color:rgb(0,0,255) !important;}
 			scrollbarbutton:hover{-moz-appearance:none !important;background-color:rgb(255,0,0) !important;}
 
+
+			/*player start*/
+			.player{width:100%;height:80px;background:#333;position:fixed;left:0;bottom:0;}
+			.player .p_left{width:230px;height:80px;float:left;}
+			.player .p_left .p_icon{width:30px;height:30px;display:block;background:url("images/icon.png") no-repeat;float:left;margin: 25px 0 0 25px;}
+			.player .p_left .p_pre{background-position:0 -90px;}
+			.player .p_left .p_pre:hover{background-position:-30px -90px;}
+			.player .p_left .p_play{background-position:0 0;}
+			.player .p_left .p_play:hover{background-position:-30px 0;}
+			.player .p_left .p_stop{background-position:0px -30px;display:none;}
+			.player .p_left .p_next{background-position:0px -60px;}
+			.player .p_left .p_next:hover{background-position:-30px -60px;}
+			.player .p_left .p_tool .t_t{width:20px;height:18px;display:block;background:url("images/icon.png") no-repeat;float:left;margin:30px 0 0 42px;}
+			.player .p_left .p_tool .t_list{background-position:0 -180px;}
+			.player .p_left .p_tool .t_list:hover{background-position:-30px -180px;}
+			.player .p_left .p_tool .t_single{background-position:0 -200px;display:none;}
+			.player .p_left .p_tool .t_single:hover{background-position:-30px -200px;display:none;}
+			.player .p_left .p_tool .t_random{background-position:0 -220px;display:none;}
+			.player .p_left .p_tool .t_random:hover{background-position:-30px -220px;display:none;}
+
+			.player .p_content{width:46%;height:60px;float:left;padding: 20px 0 0 50px;
+			border:1px solid red}
+			.player .p_content .c_name{width:100%;height:25px;}
+			.player .p_content .c_name .n_title{font-size:14px;text-decoration:none;color:#fff;float:left;}
+			.player .p_content .c_name .n_group {float:right;}
+			.player .p_content .c_name .n_group .g_g{width:18px;height:18px;display:block;float:left;background:url("images/icon.png") no-repeat;margin-left:20px;}
+			.player .p_content .c_name .n_group .g_fav{background-position:0px -240px;}
+			.player .p_content .c_name .n_group .g_fav:hover{background-position:-28px -240px;}
+			.player .p_content .c_name .n_group .q_share{background-position:0px -259px;}
+			.player .p_content .c_name .n_group .q_share:hover{background-position:-28px -259px;}
+			.player .p_content .c_name .n_group .q_more{background-position:0px -277px;}
+			.player .p_content .c_name .n_group .q_more:hover{background-position:-28px -277px;}
+
+			.player .p_content .c_time{width:100%;height:25px;}
+			.player .p_content .c_time .t_left{float:left;}
+			.player .p_content .c_time .t_center{width:85%;height:4px;background:#9b9b9b;float:left;margin: 7px 0 0 10px;}
+			.player .p_content .c_time .t_right{float:right;}
+			.player .p_content .c_time .t_center{position:relative;}
+			.player .p_content .c_time .t_center .c_played{width:30%;height:4px;background:#fff;}
+			.player .p_content .c_time .t_center .c_current{width:9px;height:9px;background:#fff;border-radius:5px;position:absolute;top:-3px;left:30%;cursor: pointer;}
+
+			.player .p_right{width:310px;height:80px;float:right;}
+			.player .p_right .r_qua{width:80px;height:30px;display:block;background:#E1E1E1;text-decoration:none;text-align:center;line-height:30px;color:#505050;border-radius:15px;margin: 25px 0 0 50px;float:left;}
+			.player .p_right .r_qua:hover{background:#fff;}
+			.player .p_right .r_voice{width:110px;height:18px;float:left;margin: 32px 0 0 26px;}
+			.player .p_right .r_voice .v_trumpet{width:18px;height:18px;display:block;background:url("images/icon.png") no-repeat 0px -296px;float:left;}
+			.player .p_right .r_voice .t_box{width:80px;height:18px;float:right;}
+			.player .p_right .r_voice .t_box .b_all{width:80px;height:3px;background:#9B9B9B;margin-top:8px;position:relative;}
+			.player .p_right .r_voice .t_box .b_all .a_small{width:40%;height:3px;background:#fff;}
+			.player .p_right .r_voice .t_box .b_all .a_current{width:9px;height:9px;border-radius:5px;background:#fff;position:absolute;top:-3px;left:40%;}
+
+			/*end player*/
 
 		</style>
 
@@ -133,7 +180,159 @@
 							<p class="l_choose"><input type="checkbox"></p>
 							<p class="l_number">1</p>
 							<div class="l_info">
-								
+								<div class="l_t">思念是一种病</div>
+								<div class="l_t">张震岳</div>
+								<div class="l_t">OK</div>
+							</div>
+							<div class="l_love">
+								<a href="#" class="l_icon l_like"></a>
+								<a href="#" class="l_icon l_more"></a>
+								<a href="#" class="l_icon l_del"></a>
+							</div>
+						</div>
+						<div class="s_list">
+							<p class="l_choose"><input type="checkbox"></p>
+							<p class="l_number">1</p>
+							<div class="l_info">
+								<div class="l_t">思念是一种病</div>
+								<div class="l_t">张震岳</div>
+								<div class="l_t">OK</div>
+							</div>
+							<div class="l_love">
+								<a href="#" class="l_icon l_like"></a>
+								<a href="#" class="l_icon l_more"></a>
+								<a href="#" class="l_icon l_del"></a>
+							</div>
+						</div>
+						<div class="s_list">
+							<p class="l_choose"><input type="checkbox"></p>
+							<p class="l_number">1</p>
+							<div class="l_info">
+								<div class="l_t">思念是一种病</div>
+								<div class="l_t">张震岳</div>
+								<div class="l_t">OK</div>
+							</div>
+							<div class="l_love">
+								<a href="#" class="l_icon l_like"></a>
+								<a href="#" class="l_icon l_more"></a>
+								<a href="#" class="l_icon l_del"></a>
+							</div>
+						</div>
+						<div class="s_list">
+							<p class="l_choose"><input type="checkbox"></p>
+							<p class="l_number">1</p>
+							<div class="l_info">
+								<div class="l_t">思念是一种病</div>
+								<div class="l_t">张震岳</div>
+								<div class="l_t">OK</div>
+							</div>
+							<div class="l_love">
+								<a href="#" class="l_icon l_like"></a>
+								<a href="#" class="l_icon l_more"></a>
+								<a href="#" class="l_icon l_del"></a>
+							</div>
+						</div>
+						<div class="s_list">
+							<p class="l_choose"><input type="checkbox"></p>
+							<p class="l_number">1</p>
+							<div class="l_info">
+								<div class="l_t">思念是一种病</div>
+								<div class="l_t">张震岳</div>
+								<div class="l_t">OK</div>
+							</div>
+							<div class="l_love">
+								<a href="#" class="l_icon l_like"></a>
+								<a href="#" class="l_icon l_more"></a>
+								<a href="#" class="l_icon l_del"></a>
+							</div>
+						</div>
+						<div class="s_list">
+							<p class="l_choose"><input type="checkbox"></p>
+							<p class="l_number">1</p>
+							<div class="l_info">
+								<div class="l_t">思念是一种病</div>
+								<div class="l_t">张震岳</div>
+								<div class="l_t">OK</div>
+							</div>
+							<div class="l_love">
+								<a href="#" class="l_icon l_like"></a>
+								<a href="#" class="l_icon l_more"></a>
+								<a href="#" class="l_icon l_del"></a>
+							</div>
+						</div>
+						<div class="s_list">
+							<p class="l_choose"><input type="checkbox"></p>
+							<p class="l_number">1</p>
+							<div class="l_info">
+								<div class="l_t">思念是一种病</div>
+								<div class="l_t">张震岳</div>
+								<div class="l_t">OK</div>
+							</div>
+							<div class="l_love">
+								<a href="#" class="l_icon l_like"></a>
+								<a href="#" class="l_icon l_more"></a>
+								<a href="#" class="l_icon l_del"></a>
+							</div>
+						</div>
+						<div class="s_list">
+							<p class="l_choose"><input type="checkbox"></p>
+							<p class="l_number">1</p>
+							<div class="l_info">
+								<div class="l_t">思念是一种病</div>
+								<div class="l_t">张震岳</div>
+								<div class="l_t">OK</div>
+							</div>
+							<div class="l_love">
+								<a href="#" class="l_icon l_like"></a>
+								<a href="#" class="l_icon l_more"></a>
+								<a href="#" class="l_icon l_del"></a>
+							</div>
+						</div>
+						<div class="s_list">
+							<p class="l_choose"><input type="checkbox"></p>
+							<p class="l_number">1</p>
+							<div class="l_info">
+								<div class="l_t">思念是一种病</div>
+								<div class="l_t">张震岳</div>
+								<div class="l_t">OK</div>
+							</div>
+							<div class="l_love">
+								<a href="#" class="l_icon l_like"></a>
+								<a href="#" class="l_icon l_more"></a>
+								<a href="#" class="l_icon l_del"></a>
+							</div>
+						</div>
+						<div class="s_list">
+							<p class="l_choose"><input type="checkbox"></p>
+							<p class="l_number">1</p>
+							<div class="l_info">
+								<div class="l_t">思念是一种病</div>
+								<div class="l_t">张震岳</div>
+								<div class="l_t">OK</div>
+							</div>
+							<div class="l_love">
+								<a href="#" class="l_icon l_like"></a>
+								<a href="#" class="l_icon l_more"></a>
+								<a href="#" class="l_icon l_del"></a>
+							</div>
+						</div>
+						<div class="s_list">
+							<p class="l_choose"><input type="checkbox"></p>
+							<p class="l_number">1</p>
+							<div class="l_info">
+								<div class="l_t">思念是一种病</div>
+								<div class="l_t">张震岳</div>
+								<div class="l_t">OK</div>
+							</div>
+							<div class="l_love">
+								<a href="#" class="l_icon l_like"></a>
+								<a href="#" class="l_icon l_more"></a>
+								<a href="#" class="l_icon l_del"></a>
+							</div>
+						</div>
+
+
+						
 
 					</div>
 				</div>
@@ -143,7 +342,83 @@
 
 			<!--c_lrc start-->
 			<div class="c_lrc">
-				<		
+				<div class="l_img">
+					<img src="images/mv.jpg" alt="美女" width="185" height="185" />
+				</div>
+				<a href="#" class="l_btn">亲亲我 ^_^</a>
+				<div class="l_con">
+					<div class="msg" id="1">一路上有你
+					</div><div class="msg" id="3">演唱：张学友
+					</div><div class="msg" id="5">
+					</div><div class="msg" id="9">你知道吗
+					</div><div class="msg" id="11">爱你并不容易
+					</div><div class="msg sel" id="14">还需要很多勇气
+					</div><div class="msg" id="19">是天意吧
+					</div><div class="msg" id="22">好多话说不出去
+					</div><div class="msg" id="25">就是怕你负担不起
+					</div><div class="msg" id="28">
+					</div><div class="msg" id="30">你相信吗
+					</div><div class="msg" id="32">这一生遇见你
+					</div><div class="msg" id="35">是上辈子我欠你的
+					</div><div class="msg" id="40">是天意吧
+					</div><div class="msg" id="42">让我爱上你
+					</div><div class="msg" id="46">才又让你 离我而去
+					</div><div class="msg" id="50">
+					</div><div class="msg" id="52">也许轮回里 早已注定
+					</div><div class="msg" id="56">今生就该我还给你
+					</div><div class="msg" id="62">一颗心在风雨里
+					</div><div class="msg" id="65">飘来飘去
+					</div><div class="msg" id="67">都是为你
+					</div><div class="msg" id="72">
+					</div><div class="msg" id="74">一路上有你
+					</div><div class="msg" id="76">苦一点也愿意
+					</div><div class="msg" id="79">就算是为了分离与我相遇
+					</div><div class="msg" id="84">一路上有你
+					</div><div class="msg" id="87">痛一点也愿意
+					</div><div class="msg" id="89">就算这辈子注定要和你分离
+					</div><div class="msg" id="95">
+					</div><div class="msg" id="103">你知道吗
+					</div><div class="msg" id="105">爱你并不容易
+					</div><div class="msg" id="108">还需要很多勇气
+					</div><div class="msg" id="113">是天意吧
+					</div><div class="msg" id="115">好多话说不出去
+					</div><div class="msg" id="119">就是怕你负担不起
+					</div><div class="msg" id="122">
+					</div><div class="msg" id="124">你相信吗
+					</div><div class="msg" id="126">这一生遇见你
+					</div><div class="msg" id="129">是上辈子我欠你的
+					</div><div class="msg" id="134">是天意吧
+					</div><div class="msg" id="136">让我爱上你
+					</div><div class="msg" id="140">才又让你离我而去
+					</div><div class="msg" id="143">
+					</div><div class="msg" id="145">也许轮回里 早已注定
+					</div><div class="msg" id="150">今生就该我还给你
+					</div><div class="msg" id="154">
+					</div><div class="msg" id="156">一颗心在风雨里
+					</div><div class="msg" id="159">飘来飘去
+					</div><div class="msg" id="161">都是为你
+					</div><div class="msg" id="167">
+					</div><div class="msg" id="168">一路上有你
+					</div><div class="msg" id="170">苦一点也愿意
+					</div><div class="msg" id="173">就算是为了分离与我相遇
+					</div><div class="msg" id="178">一路上有你
+					</div><div class="msg" id="180">痛一点也愿意
+					</div><div class="msg" id="183">就算这辈子注定要和你分离
+					</div><div class="msg" id="192">
+					</div><div class="msg" id="217">一路上有你
+					</div><div class="msg" id="219">苦一点也愿意
+					</div><div class="msg" id="222">就算是为了分离与我相遇
+					</div><div class="msg" id="227">一路上有你
+					</div><div class="msg" id="230">痛一点也愿意
+					</div><div class="msg" id="232">就算这辈子注定要和你分离
+					</div><div class="msg" id="238">一路上有你
+					</div><div class="msg" id="240">苦一点也愿意
+					</div><div class="msg" id="243">就算是为了分离与我相遇
+					</div><div class="msg" id="248">一路上有你
+					</div><div class="msg" id="251">痛一点也愿意
+					</div><div class="msg" id="253">就算只能在梦里拥抱你
+					</div><div class="msg" id="262">	
+					</div>					
 				</div>
 			</div>
 			<!--end c_lrc-->
@@ -151,9 +426,35 @@
 	</div>
 	<!--end content-->
 
-	<!--c_player start-->
-	<div class="c_player"></div>
-	<!--end c_player-->
+	<!--player start-->
+	<div class="player">
+
+		<div class="p_left">
+			<a href="#" class="p_icon p_pre"></a>
+			<a href="#" class="p_icon p_play"></a>
+			<a href="#" class="p_icon p_stop"></a>
+			<a href="#" class="p_icon p_next"></a>
+			<div class="p_tool">
+				<a href="#" class="t_t t_list" title="列表循环"></a>
+				<a href="#" class="t_t t_single" title="单曲循环"></a>
+				<a href="#" class="t_t t_random" title="随机播放"></a>
+			</div>
+		</div>
+		<div class="p_content">
+			<div class="c_name">
+				<a href="#" class="n_title">思念是一种病 - 张震岳</a>
+				<div class="n_grooup">
+					<a href="#" class="g_g g_fav"></a>
+					<a href="#" class="g_g g_share"></a>
+					<a href="#" class="g_g g_more"></a>
+				
+				</div>
+		</div>
+
+		<div class="p_right">
+	
+	</div>
+	<!--end player-->
 
 </body>
 </html>
